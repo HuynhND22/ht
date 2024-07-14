@@ -13,12 +13,12 @@ import { checkCartsUnique } from './migrations/triggers/checkCartsUnique';
 import { join } from 'path';
 
 export const AppDataSource = new DataSource({
-  type: 'mysql',
-  host: process.env.DB_HOST || 'localhost',
+  type: 'postgres',
+  host: process.env.POSTGRES_HOST || process.env.DB_HOST || 'localhost',
   port: Number(process.env.DB_PORT),
-  username: process.env.DB_USERNAME,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_DATABASE,
+  username: process.env.POSTGRES_USER || process.env.DB_USERNAME,
+  password: process.env.POSTGRES_PASSWORD || process.env.DB_PASSWORD,
+  database: process.env.POSTGRES_DATABASE || process.env.DB_DATABASE,
    // requestTimeout: 60000,
   // entities: ['entities/**/*.entity{.ts,.js}', 'entities/**/*.schema{.ts,.js}'],
   entities: [
