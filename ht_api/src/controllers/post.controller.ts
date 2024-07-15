@@ -1,7 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { AppDataSource } from "../data-source";
 import { Post } from "../entities/post.entity";
-import { Image } from "../entities/image.entity";
 import { handleUniqueError } from "../helpers/handleUniqueError";
 import fs from "fs";
 import { IsNull, Not, Like } from "typeorm";
