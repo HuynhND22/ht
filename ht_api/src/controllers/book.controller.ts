@@ -264,7 +264,7 @@ const client = async (req:Request, res:Response) => {
         const search = req.query.search
         const searchCondition = search ? { name: Like(`%${search}%`) } : {};
 
-        const products = await repository.find({where: {statusId: 41, ...searchCondition}, relations: ['images', 'category', 'supplier', 'status', 'productSizes.size'], order: {createdAt: 'DESC'}});
+        const products = await repository.find({where: {...searchCondition}, relations: ['images', 'category', 'supplier', 'status', 'productSizes.size'], order: {createdAt: 'DESC'}});
         if (products.length === 0) {
             return res.status(204).send({
                 error: "No content",
