@@ -6,7 +6,6 @@ import { DataSource } from 'typeorm';
 import { Category } from './entities/category.entity';
 import { User } from './entities/user.entity';
 import { Post } from './entities/post.entity';
-import { Image } from './entities/image.entity';
 import { Book } from './entities/book.entity';
 
 import { checkCartsUnique } from './migrations/triggers/checkCartsUnique';
