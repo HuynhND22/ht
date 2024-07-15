@@ -25,7 +25,6 @@ export const AppDataSource = new DataSource({
   entities: [
     Category, 
     Post, 
-    Image, 
     User, 
     Book
   ],

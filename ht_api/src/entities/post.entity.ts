@@ -1,7 +1,6 @@
 import { BaseEntity, BeforeInsert, BeforeUpdate, Column, CreateDateColumn, DeleteDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
 import { IsNotEmpty, validateOrReject } from 'class-validator';
 import { Category } from './category.entity';
-import { Image } from './image.entity';
 
 @Entity({ name: 'Post' })
 export class Post extends BaseEntity {
